@@ -292,7 +292,7 @@ class Manager extends events_1.EventEmitter {
 }
 exports.Manager = Manager;
 Manager.DEFAULT_SOURCES = {
-    "youtubemusic": 'ytm',
+    "youtubemusic": 'ytmsearch',
     "youtube": "ytsearch",
     "soundcloud": "scsearch"
 };
