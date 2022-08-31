@@ -294,5 +294,7 @@ exports.Manager = Manager;
 Manager.DEFAULT_SOURCES = {
     "youtubemusic": 'ytmsearch',
     "youtube": "ytsearch",
-    "soundcloud": "scsearch"
+    "soundcloud": "scsearch",
+    "amsearch": "amsearch",
+    "spsearch": "spsearch"
 };
