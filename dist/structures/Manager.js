@@ -281,7 +281,7 @@ class Manager extends events_1.EventEmitter {
                 /* player got disconnected. */
                 this.emit("playerDisconnect", player, player.voiceChannel);
                 player.voiceChannel = null;
-                player.voiceState = Object.assign({});
+                player.voiceState.sessionId = update.session_id;
                 player.pause(true);
             }
         }
