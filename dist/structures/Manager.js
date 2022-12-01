@@ -77,6 +77,11 @@ class Manager extends events_1.EventEmitter {
             for (const nodeOptions of this.options.nodes)
                 new (Utils_1.Structure.get("Node"))(nodeOptions);
         }
+        if (this.options.plugins) {
+            for (const [index, plugin] of this.options.plugins.entries()) {
+                plugin.load(this);
+            }
+        }
     }
     /** Returns the least used Nodes. */
     get leastUsedNodes() {
