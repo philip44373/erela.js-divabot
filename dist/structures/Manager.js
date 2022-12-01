@@ -73,13 +73,6 @@ class Manager extends events_1.EventEmitter {
             delete options.trackPartial;
         }
         this.options = Object.assign({ plugins: [], nodes: [{ identifier: "default", host: "localhost" }], shards: 1, autoPlay: true, clientName: "erela.js", defaultSearchPlatform: "youtube" }, options);
-        if (this.options.plugins) {
-            for (const [index, plugin] of this.options.plugins.entries()) {
-                if (!(plugin instanceof Utils_1.Plugin))
-                    throw new RangeError(`Plugin at index ${index} does not extend Plugin.`);
-                plugin.load(this);
-            }
-        }
         if (this.options.nodes) {
             for (const nodeOptions of this.options.nodes)
                 new (Utils_1.Structure.get("Node"))(nodeOptions);
